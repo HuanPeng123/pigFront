@@ -1,0 +1,81 @@
+
+<view class="top">
+
+  <view class="addtext">发布车位</view>
+
+</view>
+
+  <view class="Add">
+      <image bindtap="Add" class="pic" src="../images/add.jpg" background-size="cover"></image>
+  </view>
+
+<!--历史订单-->
+<view>
+  <form >
+
+  <view wx:for="{{item}}" wx:key="orderId">
+
+    <view wx:if="{{item.orderState == 1}}" class="order1">
+
+      <view wx:if="{{item.rentId == id}}"class="orderInfor" bindtap='detail' data-index="{{item.orderId}}" > 
+          <view class="orderText1">{{item.orderDate}}</view>
+
+          <view wx:if="{{item.orderState == 1}}" class="orderText">发布中</view>
+          <view wx:elif="{{item.orderState == 2}}" class="orderText">已完成</view>
+          <view wx:elif="{{item.orderState == 3}}" class="orderText">已完成</view>
+          <view wx:elif="{{item.orderState === 0}}" class="orderText">已失效</view>
+      </view>
+
+        <view wx:if="{{item.orderState == 1}}" class="orderButton">
+
+          <button bindtap="editOrder" data-source="{{item}}" class="button1">
+            <image class="spic" src="../images/edit.jpg">编辑</image>
+          </button>  
+          <button bindtap="deleteOrder" data-source="{{item}}" class="button1">
+          <image class="spic1" src="../images/delete.jpg">删除</image></button> 
+
+      </view>
+    </view>
+
+    <view wx:else class="order2">
+
+      <view wx:if="{{item.rentId == id}}"class="orderInfor" bindtap='detail' data-index="{{item.orderId}}" > 
+          <view class="orderText1">{{item.orderDate}}</view>
+
+          <view wx:if="{{item.orderState == 1}}" class="orderText">发布中</view>
+          <view wx:elif="{{item.orderState == 2}}" class="orderText">已完成</view>
+          <view wx:elif="{{item.orderState == 3}}" class="orderText">已完成</view>
+          <view wx:elif="{{item.orderState === 0}}" class="orderText">已失效</view>
+      </view>
+
+        <view wx:if="{{item.orderState == 1}}" class="orderButton">
+
+          <button bindtap="editOrder" data-source="{{item}}" class="button1">
+            <image class="spic" src="../images/edit.jpg">编辑</image>
+          </button>  
+          <button bindtap="deleteOrder" data-source="{{item}}" class="button1">
+          <image class="spic1" src="../images/delete.jpg">删除</image></button> 
+
+      </view>
+    </view>
+
+
+  </view>
+
+  </form>
+</view>
+
+ <!-- 黑框提示并消失 -->  
+    <toast hidden="{{toast1Hidden}}" bindchange="toast1Change">  
+        {{notice_str}}  
+    </toast>  
+    <!-- 确认框 及 提示框 -->  
+    <view class="page__bd">  
+        <modal title="确认" confirm-text="确定" cancel-text="取消" hidden="{{modalHidden}}" mask bindconfirm="confirm_one" bindcancel="cancel_one">  
+            删除后将不能恢复，确认删除？  
+        </modal>  
+        <modal class="modal" hidden="{{modalHidden2}}" no-cancel bindconfirm="modalChange2" bindcancel="modalChange2">  
+            <view> 提示 </view>  
+            <view> 清空成功 </view>  
+        </modal>  
+    </view>  

@@ -1,0 +1,111 @@
+<view id="Add">
+
+  <view class="top">
+
+  <view class="addtext">编辑订单</view>
+ 
+  </view>
+
+<form bindsubmit='formSubmit' bindreset='formReset'>
+
+  <view class="section">  
+    <view class="section__title">区域</view>  
+    <view class='form-group'>  
+
+      <input type="text" class="input-text" name="parkArea" value="{{order.parkArea}}" />   
+
+    </view>    
+  </view>  
+
+  <view class="section">   
+    <view class="section__title">楼号</view>  
+    <view class='form-group'>  
+      <input type="number" class="input-text" name="parkBuild" value="{{order.parkBuild}}" />  
+    </view> 
+  </view>   
+
+  <view class="section">    
+    <view class="section__title">车位号</view>  
+    <view class='form-group'>  
+      <input type="number" class="input-text" name="parkNum" value="{{order.parkNum}}" />  
+    </view> 
+  </view>  
+
+  <view class="section"> 
+    <view class="section__title">租出时间</view>  
+    <view class="picker">
+      <picker mode="date" value="{{dateValue}}" start="2018-04-04" end="2018-12-31" bindchange="datePickerBindchange" class="date" name="orderDate">
+    	{{dateValue}}
+      </picker>
+    </view>
+  </view>
+
+  <view wx:if="{{order.price != 0}}" >
+
+    <view class="section"> 
+      <view class="section__title">租出费用</view> 
+      <view class="form-group">
+        <text>免费</text>
+        <switch name="charge" bindchange='changeSwitch' checked='{{check}}'/> 
+      </view> 
+    </view>
+
+    <view class="section section_gap" hidden="{{chargeHidden1}}">   
+      <view class='section__title'>  
+        <input type="number" class="input-text2" name="price" value="{{order.price}}" >
+        </input>
+      </view>  
+      <text class='form-group'>币/天</text>
+    </view>  
+
+      <view class="section section_gap" hidden="{{chargeHidden2}}">   
+      <text class='form-group'> 0 币/天</text>
+      </view> 
+  </view>
+
+    <view wx:if="{{order.price == 0}}" >
+
+    <view class="section"> 
+      <view class="section__title">租出费用</view> 
+      <view class="form-group">
+        <text>免费</text>
+        <switch name="charge" bindchange='changeSwitch' checked='{{!check}}'/> 
+      </view> 
+    </view>
+
+    <view class="section section_gap" hidden="{{!chargeHidden1}}">   
+      <view class='section__title'>  
+        <input type="number" class="input-text2" name="price" placeholder="{{order.price}}" >
+        </input>
+      </view>  
+      <text class='form-group'>元/天</text>
+    </view>  
+
+      <view class="section section_gap" hidden="{{!chargeHidden2}}">   
+      <text class='form-group'> 0 币/天</text>
+      </view> 
+  </view>
+
+    <view class="btn-area">  
+      <button formType="submit" class="sub">提交</button> 
+      <button formType="reset" class="res">取消</button> 
+    </view> 
+
+
+</form>
+
+ <!-- 黑框提示并消失 -->  
+    <toast hidden="{{toast1Hidden}}" bindchange="toast1Change">  
+        {{notice_str}}  
+    </toast>  
+    <!-- 确认框 及 提示框 -->  
+    <view class="page__bd">  
+        <modal title="确认" confirm-text="确定" cancel-text="取消" hidden="{{modalHidden}}" mask bindconfirm="confirm_one" bindcancel="cancel_one">  
+            确认提交么？  
+        </modal>  
+        <modal class="modal" hidden="{{modalHidden2}}" no-cancel bindconfirm="modalChange2" bindcancel="modalChange2">  
+            <view> 提示 </view>  
+            <view> 清空成功 </view>  
+        </modal>  
+    </view>  
+</view>

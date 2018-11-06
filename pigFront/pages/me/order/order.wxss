@@ -1,0 +1,98 @@
+.top{
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.order1{
+  height: 100%;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20rpx 40rpx 40rpx 40rpx;
+  box-sizing: border-box;
+  background-color: white;
+  color: #7F6F6F;
+  border-radius: 10rpx;
+}
+.order2{
+  height: 100%;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20rpx 40rpx 40rpx 40rpx;
+  box-sizing: border-box;
+  color: #7F6F6F;
+  background-color: #F7F6F6;
+  border-radius: 10rpx;
+}
+.orderInfor{
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20rpx 0rpx 0rpx 0rpx;
+  box-sizing: border-box;
+
+  color: #7F6F6F;
+}
+
+.button1{
+  background-color: #F7F6F6;
+}
+
+button::after{
+  border: none;
+}
+.orderText{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin: 10rpx;
+  font-size: 30rpx;
+  font-weight: 400;
+}
+.midText{
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin: 10rpx;
+  font-size: 40rpx;
+  font-weight: 400;
+}
+
+.picRent {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 40rpxx;
+  border-radius: 10rpx;
+}
+
+.orderPic{
+  width: 200rpx;
+  height: 200rpx;
+  margin: 40rpxx;
+  border-radius: 10rpx;
+}
+.Note{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rpx 0;
+  box-sizing: border-box;
+  color:gray;
+}
+
+.NoteText{
+  color:gray;
+}

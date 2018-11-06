@@ -1,0 +1,99 @@
+.top{
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.spic {
+  width: 68rpx;
+  height: 68rpx;
+  margin: 5rpx;
+  border-radius: 50%;
+}
+.addtext{
+  float: center;
+}
+.section__title{  
+    float: left;  
+    width:40%;
+    margin: 15rpx 0rpx 15rpx 15rpx;  
+}  
+.form-group{  
+    float: right;  
+    width: 50%; 
+    margin: 15rpx 15rpx 15rpx 0rpx;
+}  
+.form-group2{  
+    float: right; 
+    width: 50%; 
+    margin: 15rpx 15rpx 15rpx 0rpx;
+} 
+.sub{   
+    float: left; 
+    width: 35%; 
+    height: 100rpx;
+    color: black;
+    background-color: #339999;
+    margin: 175rpx 0rpx 0rpx 0rpx;
+    border-radius: 40rpx;
+} 
+.res{   
+    float: right; 
+    width: 35%; 
+    height: 100rpx; 
+    color: black;
+    background-color: #339999;
+    margin: 175rpx 0rpx 0rpx 0rpx;
+    border-radius: 40rpx;
+} 
+.section{  
+    clear: both;  
+    width:70%;
+    font-size: 45rpx;  
+    margin: 2rem auto;  
+}  
+.picker{
+  width: 50%;
+  float: center;
+  margin: 10rpx;
+}
+.input-text{  
+    border: 1px solid #ddd;  
+    background-color: white;
+    height:70rpx;
+    font-size: 45rpx;
+}  
+.input-text2{  
+    border: 1px solid #ddd;
+    background-color: white;
+    height:70rpx;
+    font-size: 45rpx;
+ 
+}  
+.date{
+  color: #aaa;
+}
+/*swtich样式-start*/
+/*swtich整体大小*/
+.wx-switch-input{
+  width:82rpx !important;
+  height:40rpx !important;
+}
+/*白色样式（false的样式）*/
+.wx-switch-input::before{
+  width:80rpx !important;
+  height: 36rpx !important;
+}
+/*绿色样式（true的样式）*/
+.wx-switch-input::after{
+  width: 40rpx !important;
+  height: 36rpx !important;
+}
+/*swtich样式end*/
+
+
+.btn-area{
+    clear: both;  
+    width:80%;  
+    margin: 2rem auto; 
+}

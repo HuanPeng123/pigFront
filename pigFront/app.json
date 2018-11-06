@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/index/index",
+    "pages/publish/publish",
+    "pages/rent/rent",
+    
+    "pages/regist/regist",
+    "pages/me/me",
+    "pages/notification/notification",
+    "pages/publish/orderInfor/Add",
+    "pages/me/information/information",
+    "pages/me/information/edit/edit",
+    "pages/me/order/order",
+    "pages/me/order/editOrder/editOrder",
+    "pages/me/order/detail/detail",
+    "pages/me/purse/purse"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#339999",
+    "navigationBarTitleText": "小猪配停",
+    "navigationBarTextStyle": "black"
+  }
+}

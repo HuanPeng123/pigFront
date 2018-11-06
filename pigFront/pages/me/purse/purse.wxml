@@ -1,0 +1,14 @@
+<view class="top">
+
+<view class="addtext">我的钱包</view>
+
+</view>
+
+<view class="pigS">
+    <image bindtap="note" class="pic" src="../../images/PigMoney.jpg" background-size="cover"></image>
+</view>
+
+<view class="PigText">
+    <text>猪猪币: {{purse}}个</text>
+</view> 
+

@@ -1,0 +1,19 @@
+<view class="top">
+
+<view class="addtext">我的消息</view>
+
+</view>
+
+<view>
+  <form >
+  <view wx:for="{{item}}" wx:key="orderId" class="order">
+   
+    <view wx:if="{{item.orderState == 2}}" class="orderInfor">
+        <view class="orderText">您有订单交易成功~</view>
+        <view class="orderTextS">车位地址：{{item.parkArea}}-{{item.parkBuild}}-{{item.parkNum}}</view> 
+        <view class="orderTextS">交易时间：{{item.confirmDate}}</view>
+    </view>
+  
+  </view>
+  </form>
+</view>
